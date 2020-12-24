@@ -1,0 +1,5 @@
+<div *ngIf="newsService.news$ | async as articles" class="articles__container">
+  <div class="delete_favorites_button" (click)="clearMemory()">DELETE ALL FAVORITES</div>
+  <app-article-card *ngFor="let article of articles"
+  [id]="article?.id" [title]="article?.title" [body]="article?.body"></app-article-card>
+</div>

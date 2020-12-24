@@ -1,0 +1,54 @@
+<div class="authorization" [formGroup]="loginForm">
+  <h1>LOG IN</h1>
+  <div class="inset">
+    <p>
+      <input type="text" formControlName="username" id="email" placeholder="Username" (keyup.enter)="changeValue(); navigateToHomepage(); hideShow = true" (click)="hideShow = false">
+    </p>
+    <div *ngIf="
+loginForm.get('username').invalid &&
+        loginForm.get('username').errors &&
+        (loginForm.get('username').dirty || loginForm.get('username').touched)">
+      <small class="text-danger_username"
+             *ngIf="loginForm.get('username').hasError('required')">
+        This field is required.
+      </small>
+      <small class="text-danger_username"
+             *ngIf="loginForm.get('username').hasError('minlength')">
+        The minimum length is {{minLength}} characters.
+      </small>
+      <small class="text-danger_username"
+             *ngIf="loginForm.get('username').hasError('maxlength')">
+        The maximum length is {{maxLength}} characters.
+      </small>
+    </div>
+    <p>
+      <input type="password" formControlName="password" id="password" placeholder="Password" (keyup.enter)="changeValue(); navigateToHomepage(); hideShow = true" (click)="hideShow = false">
+    </p>
+    <div *ngIf="loginForm.get('password').invalid &&
+        loginForm.get('password').errors &&
+        (loginForm.get('password').dirty || loginForm.get('password').touched)">
+      <small class="text-danger_password"
+             *ngIf="loginForm.get('password').hasError('required')">
+        This field is required.
+      </small>
+      <small class="text-danger_password"
+             *ngIf="loginForm.get('password').hasError('minlength')">
+        The minimum length for this field is {{minLength}} characters.
+      </small>
+      <small class="text-danger_password"
+             *ngIf="loginForm.get('password').hasError('maxlength')">
+        The maximum length for this field is {{maxLength}} characters.
+      </small>
+    </div>
+    <div *ngIf="(authorizationService.isAuthError$ | async) && hideShow">
+      <small class="text-danger_incorrect">
+        Incorrect username or password.
+      </small>
+    </div>
+  </div>
+  <p class="p-container">
+    <button class="submit_button" [disabled]="loginForm.invalid" (click)="changeValue(); navigateToHomepage(); hideShow = true">
+      Authorize
+    </button>
+  </p>
+</div>

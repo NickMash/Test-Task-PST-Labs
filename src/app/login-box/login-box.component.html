@@ -1,0 +1,6 @@
+<div class="login_box">
+  <div class="guest_name">Hello
+    <div class="guest">{{authorizationService.userName.toUpperCase()}}</div>
+  </div>
+  <div class="avatar" (click)="navigateToAuthorizationPage(); hideItems(); clearMemory()"></div>
+</div>
