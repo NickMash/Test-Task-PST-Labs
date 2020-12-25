@@ -26,7 +26,7 @@ body {
 }
 
 body::before {
-  background-image: url('/assets/images/night_city_background.jpg');
+  background-image: url('assets/images/night_city_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

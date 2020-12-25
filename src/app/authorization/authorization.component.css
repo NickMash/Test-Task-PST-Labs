@@ -48,7 +48,7 @@ body {
   border: 1px solid #232324;
   border-radius: .4em;
   bottom: 0;
-  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2), 12px 12px 12px rgba(0, 0, 0, 0.5), 12px 12px 12px rgba(0, 0, 0, 0.5);
   height: 296px;
   left: 0;
   margin: 200px auto 0 auto;

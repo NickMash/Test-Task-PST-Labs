@@ -22,7 +22,7 @@
   opacity: 0.6;
   position: absolute;
   left: 0;
-  right: 0;
+  right: 20px;
   margin: -23px auto;
   z-index: 1;
 }
@@ -38,11 +38,17 @@
   .favorites__container {
     max-width: 784px;
   }
+  .delete_favorites_button {
+    right: 10px;
+  }
 }
 @media (max-width: 800px) {
   .favorites__container {
     max-width: 784px;
     justify-content: center;
+  }
+  .delete_favorites_button {
+    right: 0;
   }
 }
 @media (max-width: 500px) {

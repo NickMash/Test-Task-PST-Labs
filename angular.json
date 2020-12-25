@@ -115,6 +115,10 @@
               "devServerTarget": "Test-Task-PST-Labs:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

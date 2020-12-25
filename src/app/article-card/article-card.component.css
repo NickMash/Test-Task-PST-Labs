@@ -83,7 +83,7 @@
 .favorites_button {
   width: 35px;
   height: 35px;
-  background-image: url('/assets/images/favorites_black_button.png');
+  background-image: url('assets/images/favorites_black_button.png');
   background-size: cover;
   position: absolute;
   z-index: 0;
@@ -101,7 +101,7 @@
 .favorites_button_clicked {
   width: 35px;
   height: 35px;
-  background-image: url('/assets/images/favorites_color_button.png');
+  background-image: url('assets/images/favorites_color_button.png');
   background-size: cover;
   position: absolute;
   z-index: 0;
@@ -115,7 +115,7 @@
 .favorites_button_clicked_2 {
   width: 35px;
   height: 35px;
-  background-image: url('/assets/images/favorites_color_button.png');
+  background-image: url('assets/images/favorites_color_button.png');
   background-size: cover;
   position: absolute;
   z-index: -2;
