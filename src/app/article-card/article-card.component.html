@@ -1,9 +1,0 @@
-<div class="article_card">
-  <div *ngIf="(authorizationService.isAdmin$ | async) && !isFavorites " class="close_article" (click)="deleteNews(id)"></div>
-  <h4 class="article_title">{{id}} {{title}}</h4>
-  <p class="article_body">{{body}}</p>
-  <div class="shine"></div>
-  <div class="favorites_button" (click)="addArticle(id)" *ngIf="!isFavorites && !newsService.checkFavorites(id)"></div>
-  <div class="favorites_button_clicked" *ngIf="!isFavorites && newsService.checkFavorites(id)" ></div>
-  <div class="favorites_button_clicked_2"></div>
-</div>

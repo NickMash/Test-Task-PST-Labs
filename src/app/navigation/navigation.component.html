@@ -1,7 +1,0 @@
-<nav class="navigation__container" id="navigation__container">
-  <app-menu-item *ngIf="false" routerLink="authorization" routerLinkActive="active" [itemName]="'AUTHORIZATION'"></app-menu-item>
-  <div class="nav_menu_item" *ngIf="!(authorizationService.isAuthorized$ | async)">AUTHORIZATION</div>
-  <app-menu-item *ngIf="authorizationService.isAuthorized$ | async" routerLink="homepage" routerLinkActive="active" [itemName]="'HOMEPAGE'"></app-menu-item>
-  <app-menu-item *ngIf="authorizationService.isAuthorized$ | async" routerLink="favorites" routerLinkActive="active" [itemName]="'FAVORITES'"></app-menu-item>
-  <app-login-box *ngIf="authorizationService.isAuthorized$ | async"></app-login-box>
-</nav>
